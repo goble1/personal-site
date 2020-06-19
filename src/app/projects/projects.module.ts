@@ -1,25 +1,26 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { SharedModule } from 'src/app/shared/shared.module'; // any thing you want shared from the root module
 import { RouterModule } from '@angular/router';
+
+import { SharedModule } from 'src/app/shared/shared.module'; // any thing you want shared from the root module
+
 import { ProjectListComponent } from './project-list.component';
 
 
 
 @NgModule({
   imports: [
-    CommonModule,
     SharedModule,
     RouterModule.forChild([
       { path: 'projects', component: ProjectListComponent}
     ])
   ],
-  declarations: [],
+  declarations: [
+    ProjectListComponent,
+  ],
   exports: [
-    CommonModule,
-    FormsModule
+    FormsModule,
   ]
 })
 
-export class ProjectsComponent {}
+export class ProjectsModule {}
