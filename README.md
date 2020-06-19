@@ -12,4 +12,6 @@ building basic layout for pages and working on routing
 3. have a section for programming articules: book reviews
 4. have a section for projects mostly projects that I can't run on the computer
 5. store everything in s3 and dynamodb
+6. update header with links to github, linkedin
+7. main page should have tiles with gifs or pictures
 

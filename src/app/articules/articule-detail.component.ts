@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IArticule } from '../shared/articules';
+import { IArticule } from 'src/app/shared/articules';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ArticuleService } from '../shared/articule.service';
+import { ArticuleService } from 'src/app/shared/articule.service';
 
 @Component({//no selector since getting through this page will be through angular routing
   templateUrl: './articule-detail.component.html',

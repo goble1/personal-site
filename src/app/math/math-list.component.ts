@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 
-import { ArticuleService } from '../shared/articule.service';
-import { IArticule } from '../shared/articules';
+import { ArticuleService } from 'src/app/shared/articule.service';
+import { IArticule } from 'src/app/shared/articules';
 
 @Component({
   //selector: 'pm-math-list', dont need selector because of routing
@@ -13,6 +13,7 @@ export class MathListComponent implements OnInit{
   imageWidth = 50;
   imageMargin = 2;
   errorMessage: string;
+
 
   _listFilter = ''; //underscore shows it's a private property
   get listFilter(): string {
