@@ -1,11 +1,5 @@
-<nav class='navbar navbar-expand navbar-light bg-light'>
-  <a class='navbar-brand'>{{title}}</a>
-  <ul class='nav nav-pills'>
-    <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/welcome']">Home</a></li>
-    <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/articules']">articules</a></li>
-    <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/projects']">projects</a></li>
-  </ul>
-</nav>
-<div class='container'>
-<router-outlet></router-outlet>
+<app-header></app-header>
+<div class='container'
+     [@slideInAnimation] ="o.isActivated ? o.activatedRoute : '' ">
+<router-outlet #o="outlet"></router-outlet>
 </div>

@@ -1,0 +1,18 @@
+<div class="card mt-2 border-primary">
+    <div class="card-header">
+        <h3>{{title}}</h3>
+    </div>
+    <div class="mx-auto pt-2 pb-2">
+        <table>
+          <tr *ngFor="let row of board.cells;index as r;">
+            <td *ngFor="let cell of row;index as c;" >
+                <div *ngIf="cell.status ==='isStart'" class="mx-auto">
+                    <i class="fas fa-sign-out-alt fa-fw"></i>
+                </div>
+                <div *ngIf="cell.status ==='isFinnish'" >
+                    <i class="fas fa-sign-in-alt fa-fw"></i>
+                </div>
+            </td>
+          </tr>
+        </table>
+</div>

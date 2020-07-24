@@ -1,0 +1,91 @@
+.selection-container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.selection-container input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.selection-background {
+  position: absolute;
+  margin: auto;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  width: 30px;
+  background-color: color("white");
+  border: 2px solid theme-color("primary");
+}
+
+.selection-container.checkbox .selection-background {
+  border-radius: 15%;
+}
+
+.selection-container.radio .selection-background {
+  border-radius: 50%;
+}
+
+.selection-container.is-invalid .selection-background {
+  border: 2px solid theme-color("danger");
+}
+
+.selection-container.is-disabled .selection-background {
+  border: 2px solid gray("600");
+  background-color: gray("400");
+}
+
+.selection-container.is-disabled input:checked + .selection-background {
+  background-color: gray("600");
+}
+
+.selection-container input:checked + .selection-background {
+  background-color: theme-color("primary");
+}
+
+.selection-container input:focus + .selection-background {
+  box-shadow: 0 0 5px theme-color("primary");
+}
+
+.selection-background:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.selection-container input:checked + .selection-background:after {
+  display: block;
+}
+
+.selection-container.checkbox .selection-background:after {
+  top: 5px;
+  left: 9px;
+  width: 8px;
+  height: 14px;
+  border: solid color("white");
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.selection-container.radio .selection-background:after {
+  top: 7px;
+  left: 7px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: color("white");
+}

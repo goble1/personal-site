@@ -1,0 +1,15 @@
+@import "~src/scss/styles";
+
+img.icon {
+  width: 30px;
+  height: 30px;
+}
+
+img.icon.icon-small {
+  width: 18px;
+  height: 18px;
+}
+
+.navbar-dropdown {
+  z-index: $zindex-tooltip;
+}

@@ -4,12 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule }  from '@angular/router';
 import { ProjectsModule } from './projects/projects.module';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutModule } from '@angular/cdk/layout';
+
+
 
 import { AppComponent } from './app.component';
 import { MathListComponent } from './math/math-list.component';
 import { ArticuleDetailComponent } from './articules/articule-detail.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { ArticuleDetailGuard } from './articules/articule-detail.guard';
+import { HeaderComponent } from './header/header.component';
+
+
+
 
 
 
@@ -20,12 +30,17 @@ import { ArticuleDetailGuard } from './articules/articule-detail.guard';
     MathListComponent,
     ArticuleDetailComponent,
     WelcomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     ProjectsModule,
+    LayoutModule,
+    BsDropdownModule.forRoot(),
+    CollapseModule.forRoot(),
     RouterModule.forRoot([
       { path: 'articules', component: MathListComponent },
       { path: 'articules/:id', 

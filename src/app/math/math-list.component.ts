@@ -6,7 +6,7 @@ import { IArticule } from 'src/app/shared/articules';
 @Component({
   //selector: 'pm-math-list', dont need selector because of routing
   templateUrl: './math-list.component.html',
-  styleUrls: ['./math-list.component.css']
+  styleUrls: ['./math-list.component.scss']
 })
 export class MathListComponent implements OnInit{
   pageTitle = 'Math Articules';

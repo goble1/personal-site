@@ -5,7 +5,7 @@ import { ArticuleService } from 'src/app/shared/articule.service';
 
 @Component({//no selector since getting through this page will be through angular routing
   templateUrl: './articule-detail.component.html',
-  styleUrls: ['./articule-detail.component.css']
+  styleUrls: ['./articule-detail.component.scss']
 })
 export class ArticuleDetailComponent implements OnInit {
   pageTitle: string = 'Articule Detail';

@@ -1,0 +1,35 @@
+$blue: #0f426a;
+$blue-light: #00a5db;
+$red: #c8102e;
+$orange: #fd6c45;
+$yellow: #f5be40;
+$green: #76bc21;
+
+$gray: #cfd2d3;
+$gray-light: #f7f7f7;
+$black: #323e48;
+
+$link-color: $blue;
+
+$color: (
+  "blue": $blue,
+  "blue-light": $blue-light,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "gray": $gray,
+  "gray-light": $gray-light,
+  "black": $black
+);
+
+$theme-colors: (
+  "primary": $blue,
+  "secondary": $gray,
+  "success": $green,
+  "info": $blue-light,
+  "warning": $yellow,
+  "danger": $red,
+  "light": $gray-light,
+  "dark": $black
+);

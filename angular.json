@@ -25,7 +25,7 @@
               "src/api"
             ],
             "styles": [
-              "src/styles.css"
+              "src/scss/styles.scss"
             ],
             "scripts": []
           },
@@ -122,5 +122,10 @@
       }
     }
   },
-  "defaultProject": "APM"
+  "defaultProject": "APM",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
