@@ -27,6 +27,6 @@ export class MindSweeperComponent {
   }
 
   restartBoard(){
-    this.board = new Board(4,4);
+    this.board = new Board(10,10);
   }
 }

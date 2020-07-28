@@ -2,16 +2,16 @@
     <div class="card-header">
         <h3>{{title}}</h3>
     </div>
+    <div class="container">
+        <button class="btn btn-primary" (click)="runBFS()">BFS</button>
+
+    </div>
     <div class="mx-auto pt-2 pb-2">
         <table>
           <tr *ngFor="let row of board.cells;index as r;">
-            <td *ngFor="let cell of row;index as c;" >
-                <div *ngIf="cell.status ==='isStart'" class="mx-auto">
-                    <i class="fas fa-sign-out-alt fa-fw"></i>
-                </div>
-                <div *ngIf="cell.status ==='isFinnish'" >
-                    <i class="fas fa-sign-in-alt fa-fw"></i>
-                </div>
+            <td *ngFor="let cell of row;index as c;" [ngClass]="{bgred: cell.status ==='display'}">
+                <i *ngIf="cell.isStart" class="fas fa-sign-out-alt fa-fw"></i>
+                <i *ngIf="cell.isFinnish" class="fas fa-sign-in-alt fa-fw"></i>
             </td>
           </tr>
         </table>

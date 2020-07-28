@@ -1,9 +1,13 @@
 import { Cell } from "./cell.component";
+import { BreathFirstSearch } from './breathFirstSearch.component';
+
 
 export class Board {
     cells: Cell[][] = []; // how you initialize an empty array
     rows: number;
     cols: number;
+    start: Cell;
+    end: Cell;
     remainingCells = 0;
 
     //Count neighboring minds and
@@ -19,8 +23,9 @@ export class Board {
                 this.cells[r][c] = new Cell(r,c);
             }
         }
-
-        this.cells[10][5].status = 'isStart';
-        this.cells[10][34].status = 'isFinnish';
+        this.cells[10][5].isStart = true;
+        this.start = this.cells[10][5];
+        this.cells[10][34].isFinnish = true;
+        this.end = this.cells[10][34];
     }
 }
